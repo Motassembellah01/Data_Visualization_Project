@@ -1,0 +1,74 @@
+<div class="heatmap-container">
+    <app-loader *ngIf="isLoading"></app-loader>
+    <div class="viz-introduction">
+        <h2 class="viz-title">
+            Évolution mensuelle des attaques par type de cible
+        </h2>
+
+        <p class="viz-description">
+            Cette visualisation présente l'évolution du nombre total de morts
+            par mois en fonction des différentes catégories de cibles entre 1990
+            et 2015 aux États-Unis. Chaque cellule de la carte de chaleur
+            correspond à un mois et une catégorie précise, et la couleur indique
+            l'intensité du nombre de victimes. Les cibles sont affichées de
+            gauche à droite dans l'ordre suivant : Civils et institutions
+            sociales, Gouvernement et sécurité, Secteur privé et médias,
+            Infrastructures et transports, et Autres. On observe que les cibles
+            les plus touchées sont les civils et institutions sociales ainsi que
+            le gouvernement et les forces de sécurité. Les mois d’avril et de
+            septembre sont les périodes les plus critiques, avec des pics
+            particulièrement marqués. Par exemple, en septembre 2001, on
+            enregistre 2807 morts pour les civils et 191 morts pour les
+            institutions gouvernementales, en lien avec les attentats du 11
+            septembre. Les autres cibles demeurent très faiblement touchées tout
+            au long de la période.
+        </p>
+        <h2 class="viz-title">
+            Évolution du nombre de morts par mois en fonction des cibles
+        </h2>
+    </div>
+    <div id="heatmap-container"></div>
+</div>
+
+<div class="analysis-container">
+    <div class="analysis-content">
+        <h2 class="analysis-title">Analyse des tendances</h2>
+        <div class="analysis-grid">
+            <div class="analysis-card">
+                <h3>Évolution des conséquences</h3>
+                <p>
+                    L'analyse de la carte de chaleur révèle une évolution
+                    significative dans l'impact des attaques selon les cibles.
+                    Les zones les plus sombres indiquent une augmentation
+                    notable du nombre de victimes pour certaines catégories de
+                    cibles au fil du temps.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Variation par cible</strong> : Les institutions
+                        sociales, gouvernementales et de sécurité montrent le
+                        plus de morts. On peut nottament remarquer l'attaque du
+                        11 septembre avec presque 3000 morts.
+                    </li>
+                </ul>
+            </div>
+            <div class="analysis-card">
+                <h3>Périodes critiques</h3>
+                <p>
+                    La visualisation identifie des motifs temporels clairs dans
+                    la distribution des attaques, répondant directement à la
+                    question des dates spécifiques.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Pics saisonniers</strong> : Avril et Septembre
+                        présentent systématiquement des valeurs supérieures à la
+                        moyenne annuelle. Ce sont des mois relativement chauds
+                        en termes de température, et donc propices à des
+                        attaques.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

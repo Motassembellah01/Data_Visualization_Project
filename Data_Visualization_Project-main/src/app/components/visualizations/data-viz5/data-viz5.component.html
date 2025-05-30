@@ -1,0 +1,80 @@
+<div class="map-container">
+    <p class="viz-description">
+        Entre 1990 et 2015, les attaques incendiaires constituent une part
+        particulièrement importante des actes terroristes perpétrés sur le
+        territoire américain. Leur fréquence élevée, révélée par l’analyse des
+        données globales, indique qu’il s’agit d’un mode opératoire privilégié
+        par de nombreux groupes en quête d’impact visuel, de déstabilisation
+        matérielle et de couverture médiatique. Afin de mieux comprendre cette
+        tendance, il est pertinent de s’intéresser à leur répartition
+        géographique. La carte suivante met en lumière une réalité frappante :
+        ces attaques ne sont pas réparties uniformément sur l’ensemble du
+        territoire. Au contraire, elles semblent fortement concentrées dans
+        certaines régions bien précises, notamment sur la côte ouest des
+        États-Unis.
+    </p>
+    <p class="viz-description">
+        Cette distribution spatiale souligne que les attaques incendiaires
+        répondent souvent à des logiques opportunistes et géographiques,
+        combinant vulnérabilité naturelle et concentration de cibles
+        stratégiques. La compréhension de ces foyers récurrents permet non
+        seulement de contextualiser les attaques passées, mais aussi d’orienter
+        les stratégies de prévention futures.
+    </p>
+    <app-loader *ngIf="isLoading"></app-loader>
+
+    <div id="map-container"></div>
+</div>
+
+<div class="analysis-container">
+    <div class="analysis-content">
+        <h2 class="analysis-title">
+            Répartition géographique des attaques incendiaires aux États-Unis
+        </h2>
+        <div class="analysis-grid">
+            <div class="analysis-card">
+                <h3>Concentration géographique</h3>
+                <p>
+                    La carte révèle une forte concentration d’attaques
+                    incendiaires dans certains États, notamment sur la côte
+                    ouest.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Californie</strong> : État le plus touché, en
+                        raison de sa densité urbaine, de son climat sec propice
+                        aux incendies, et de la présence de groupes militants
+                        historiquement actifs.
+                    </li>
+                    <li>
+                        <strong>Oregon et Washington</strong> : Autres foyers
+                        notables, peut-être en lien avec des tensions sociales
+                        et environnementales dans certaines régions.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="analysis-card">
+                <h3>Facteurs explicatifs possibles</h3>
+                <p>
+                    Plusieurs facteurs peuvent expliquer cette distribution
+                    géographique.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Climat</strong> : Les États à climat sec et
+                        chaud comme la Californie sont naturellement plus
+                        vulnérables aux incendies, rendant les attaques
+                        incendiaires plus destructrices et visibles.
+                    </li>
+                    <li>
+                        <strong>Symbolisme et impact</strong> : Cibler des zones
+                        densément peuplées ou à forte visibilité médiatique peut
+                        renforcer l’impact psychologique ou politique recherché
+                        par les auteurs.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="viz-introduction">
+        <h2 class="viz-title">Tendances par catégories de cibles</h2>
+
+        <div class="viz-description">
+            <p>
+                Cette visualisation montre l'évolution des attaques terroristes
+                aux États-Unis entre 1990 et 2015, en fonction des catégories de
+                cibles visées. Ces attaques ont connu des fluctuations
+                importantes, avec un pic majeur en 1994-1995 (plus de 50
+                incidents) et un net déclin dans les années 2000 (seulement 6 en
+                2006).
+            </p>
+            <p>Cinq grandes catégories de cibles sont présentées :</p>
+            <ul>
+                <li>
+                    <strong>Gouvernement et sécurité : </strong> Cette catégorie
+                    regroupe les attaques ciblant des bâtiments gouvernementaux,
+                    des forces de sécurité, des diplomates, etc.
+                </li>
+                <li>
+                    <strong>Secteur privé et médias : </strong>Cela inclut les
+                    attaques contre des entreprises privées, des journalistes,
+                    des médias, etc.
+                </li>
+                <li>
+                    <strong>Infrastructures et transports : </strong>Cette
+                    catégorie comprend les attaques contre des infrastructures
+                    critiques comme les transports, les réseaux d'énergie, etc.
+                </li>
+                <li>
+                    <strong>Civils et institutions sociales : </strong>Cela
+                    comprend les civils, les lieux publics, les écoles, les
+                    hôpitaux et d'autres institutions sociales.
+                </li>
+                <li>
+                    <strong>Autres : </strong>Cette catégorie regroupe toutes
+                    les autres attaques qui ne correspondent pas aux types
+                    précédemment mentionnés.
+                </li>
+            </ul>
+            <p>
+                Cette catégorisation permet de mieux comprendre les stratégies
+                déployées par les groupes terroristes et leurs évolutions au fil
+                du temps.
+            </p>
+        </div>
+    </div>
+
+    <app-loader *ngIf="isLoading"></app-loader>
+    <div id="stacked-area-chart">
+        <div id="tooltip" class="tooltip"></div>
+    </div>
+
+    <div class="analysis-container">
+        <div class="analysis-content">
+            <h2 class="analysis-title">Analyse des tendances</h2>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Cibles principales</h3>
+                    <p>
+                        La période 1990-2015 est marquée par une nette
+                        domination des attaques visant les civils et
+                        institutions sociales ainsi que le secteur privé et
+                        médias. Cette orientation stratégique reflète une
+                        volonté de provoquer un impact émotionnel fort et de
+                        perturber les structures économiques ou médiatiques.
+                    </p>
+                    <ul class="key-points">
+                        <li>
+                            <strong>Civils et institutions sociales</strong> :
+                            Plus ciblés à partir de 1999, culminant à 28
+                            attaques cette année-là et atteignant un pic final
+                            en 2015 avec 15 incidents.
+                        </li>
+                        <li>
+                            <strong>Secteur privé et médias</strong> :
+                            Fréquemment visés entre 1994 et 2003, avec des
+                            sommets notables en 1994 (21 attaques), 1995 (16),
+                            2001 (21) et 2003 (20).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>Diversification stratégique des cibles</h3>
+                    <p>
+                        La visualisation révèle des variations importantes dans
+                        le choix des cibles. Bien que certaines catégories
+                        soient restées peu fréquentes, elles apparaissent de
+                        manière récurrente.
+                    </p>
+                    <ul class="key-points">
+                        <li>
+                            <strong>Gouvernement et sécurité</strong> : Cibles
+                            secondaires mais constantes, avec des pics à des
+                            moments comme 1991 (10 attaques) ou 1995 (10).
+                        </li>
+                        <li>
+                            <strong>Infrastructures et transports</strong> : Peu
+                            visées, mais utilisées de manière ciblée, notamment
+                            autour des années 1990 et après 2008.
+                        </li>
+                        <li>
+                            <strong>Autres</strong> : Fortement présentes
+                            jusqu'en 1998, puis progressivement délaissées.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

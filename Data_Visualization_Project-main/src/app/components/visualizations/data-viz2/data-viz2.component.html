@@ -1,0 +1,170 @@
+<div class="container">
+    <div class="viz-introduction">
+        <h2 class="viz-title">
+            Évolution des attaques terroristes par type
+            <select
+                (change)="onCategoryChange($event)"
+                class="category-selector viz-controls"
+            >
+                <option value="weapon">d'armes</option>
+                <option value="attack">d'attaques</option>
+            </select>
+        </h2>
+
+        <p class="viz-description" *ngIf="isAttack">
+            Entre 1990 et 2015, les attaques terroristes aux États-Unis ont
+            principalement visé des installations ou utilisé des explosifs. Ces
+            deux types dominent clairement la période, marqués par des pics
+            autour de 1995, 2001 et ensuite à intervalles réguliers. Leur
+            fréquence suggère une stratégie privilégiant l’impact matériel et la
+            perturbation des infrastructures plutôt que les pertes humaines. Les
+            explosions (en bleu), très présentes dans les années 1990,
+            atteignent un sommet en 2002 avant de décliner. Dès 2005, on note
+            une diversification des attaques, incluant davantage d’assauts
+            armés, d’assassinats et de prises d’otages, bien que ces types
+            restent marginaux. Cela souligne une nette préférence pour des
+            cibles matérielles et des tactiques moins risquées sur le plan
+            opérationnel.
+        </p>
+
+        <p class="viz-description" *ngIf="!isAttack">
+            Entre 1990 et 2015, les données montrent une évolution stratégique
+            dans le choix des armes utilisées lors des attaques terroristes aux
+            États-Unis. Les armes à feu, brièvement dominantes dans les années
+            1990, atteignent un pic en 1994-1995 avant de décliner fortement.
+            Leur désuétude s’explique par les risques opérationnels élevés et le
+            besoin de discrétion. À l’inverse, les explosifs (bombes, dynamite)
+            présentent une stabilité remarquable sur la période, avec des pics
+            entre 1997 et 2002. Leur attrait réside dans leur puissance, leur
+            capacité à frapper à distance et leur effet psychologique fort. Les
+            autres types d’armes — incendiaires, véhicules, fausses armes ou
+            équipements de sabotage — apparaissent de manière sporadique,
+            souvent dans des contextes ciblés. Certaines armes comme les armes
+            chimiques, biologiques ou radiologiques restent quasi absentes, en
+            raison de leur complexité d’usage ou d’obstacles éthiques. Cette
+            diversification illustre l’adaptation tactique des groupes
+            terroristes à la surveillance et à la modernisation des systèmes de
+            sécurité.
+        </p>
+    </div>
+
+    <app-loader *ngIf="isLoading"></app-loader>
+    <div id="line-chart"></div>
+
+    <div class="time-controls">
+        <div class="time-slider">
+            <label for="start-year">Année de début:</label>
+            <input
+                type="range"
+                id="start-year"
+                min="1990"
+                max="2015"
+                [value]="startYear"
+                (input)="onStartYearChange($event)"
+            />
+            <span>{{ startYear }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="analysis-container" *ngIf="isAttack">
+    <div class="analysis-content">
+        <h2 class="analysis-title">Points intéressants</h2>
+        <div class="analysis-grid">
+            <div class="analysis-card">
+                <h3>Types d’attaques dominants</h3>
+                <p>
+                    La visualisation met en évidence la nette prédominance des
+                    attaques contre des installations (en vert) et des
+                    explosions (en bleu) entre 1990 et 2015. Ces types
+                    représentent une stratégie de perturbation matérielle
+                    récurrente.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Installations/Infrastructures</strong> : Restent
+                        le type d’attaque le plus fréquent sur l’ensemble de la
+                        période.
+                    </li>
+                    <li>
+                        <strong>Explosions</strong> : Fortes dans les années
+                        1990, pic en 2002, puis déclin progressif.
+                    </li>
+                </ul>
+            </div>
+            <div class="analysis-card">
+                <h3>Évolutions et diversification</h3>
+                <p>
+                    On observe à partir de 2005 une diversification avec
+                    l’apparition plus marquée de types comme les assassinats,
+                    assauts armés et prises d’otages. Néanmoins, ces méthodes
+                    restent minoritaires.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Après 2005</strong> : Diversification mais
+                        dominance maintenue des cibles matérielles.
+                    </li>
+                    <li>
+                        <strong>Préférence stratégique</strong> : Recours à des
+                        moyens plus simples, moins risqués et plus anonymes.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="analysis-container" *ngIf="!isAttack">
+    <div class="analysis-content">
+        <h2 class="analysis-title">Points intéressants</h2>
+        <div class="analysis-grid">
+            <div class="analysis-card">
+                <h3>Armes dominantes</h3>
+                <p>
+                    Deux types d’armes ressortent nettement : les explosifs et
+                    les armes à feu. Chacune reflète une stratégie différente en
+                    matière d’impact et de risque opérationnel.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Explosifs</strong> : Utilisation régulière sur
+                        toute la période, avec des pics entre 1997 et 2002. Très
+                        prisés pour leur impact médiatique et leur capacité à
+                        frapper à distance.
+                    </li>
+                    <li>
+                        <strong>Armes à feu</strong> : Brève période de
+                        prédominance au milieu des années 1990, suivie d’un fort
+                        déclin. Risques élevés pour les assaillants.
+                    </li>
+                </ul>
+            </div>
+            <div class="analysis-card">
+                <h3>Diversification marginale</h3>
+                <p>
+                    Hormis les dominantes, les autres types d’armes sont
+                    utilisés de manière ponctuelle et spécifique, souvent en
+                    réponse à des opportunités ou contraintes contextuelles.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Incendiaires et sabotage</strong> : Présents de
+                        façon limitée, souvent liés à des attaques techniques ou
+                        symboliques.
+                    </li>
+                    <li>
+                        <strong>Fausses armes et véhicules</strong> : Usage
+                        isolé autour des années 1998-1999, surtout à des fins
+                        d’intimidation.
+                    </li>
+                    <li>
+                        <strong>Armes chimiques/biologiques</strong> : Quasiment
+                        absentes, en raison de leur complexité et de leur
+                        dangerosité.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

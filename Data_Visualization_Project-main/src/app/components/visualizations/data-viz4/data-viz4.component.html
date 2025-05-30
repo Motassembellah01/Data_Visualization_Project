@@ -1,0 +1,57 @@
+<div class="heatmap-container">
+    <app-loader *ngIf="isLoading"></app-loader>
+
+    <div id="heatmap-container-viz4"></div>
+</div>
+
+<div class="analysis-container">
+    <div class="analysis-content">
+        <h2 class="analysis-title">
+            Corrélation entre le type d’arme et la période
+        </h2>
+        <div class="analysis-grid">
+            <div class="analysis-card">
+                <h3>Motifs temporels</h3>
+                <p>
+                    La carte de chaleur montre que certains types d’armes sont
+                    utilisés plus fréquemment à des périodes spécifiques de
+                    l’année.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Explosifs (bombes, dynamite)</strong> : Utilisés principalement au printemps (avril, mai)
+                        et à l'hiver (décembre,janvier), avec des pics notables en janvier (26 attaques) et mai (31 attaques).
+                    </li>
+                    <li>
+                        <strong>Armes à feu</strong> : Leur usage est plus diffus tout au long de l’année,
+                         mais légèrement plus élevé entre mars et juillet.
+                    </li>
+                    <li>
+                        <strong>Incendiaires</strong> : Très utilisés en janvier (38 attaques), mars (35), et juin (27), suggérant une saisonnalité marquée.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="analysis-card">
+                <h3>Hypothèses possibles</h3>
+                <p>
+                    Ces variations peuvent être liées à des considérations
+                    logistiques, symboliques (dates commémoratives), ou
+                    climatiques.
+                </p>
+                <ul class="key-points">
+                    <li>
+                        <strong>Symbolisme</strong> : Certains groupes
+                        pourraient choisir des mois précis pour un impact
+                        médiatique plus fort.
+                    </li>
+                    <li>
+                        <strong>Climat</strong> : Les mois plus chauds peuvent
+                        faciliter certains types d’attaques (logistique,
+                        déplacement, attroupement).
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

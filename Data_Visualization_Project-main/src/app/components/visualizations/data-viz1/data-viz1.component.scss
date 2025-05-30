@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#stacked-area-chart {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 12px;
+    background: white;
+    border-radius: 6px;
+    pointer-events: none;
+    font-size: 14px;
+    border: 1px solid #334155;
+    min-width: 250px;
+    opacity: 0;
+    z-index: 100;
+}
+
+.viz-introduction {
+    margin-bottom: 20px;
+
+    .viz-title {
+        text-align: center;
+    }
+
+    .viz-description {
+        color: #444;
+        line-height: 1.6;
+        text-align: justify;
+        font-size: 20px;
+    }
+}
+
+.analysis-container {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.analysis-container .analysis-content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.analysis-container .analysis-content .analysis-title {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.analysis-container .analysis-content .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.analysis-container .analysis-content .analysis-grid .analysis-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.analysis-container .analysis-content .analysis-grid .analysis-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.analysis-container .analysis-content .analysis-grid .analysis-card h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.analysis-container .analysis-content .analysis-grid .analysis-card p {
+    color: #546e7a;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.analysis-container
+    .analysis-content
+    .analysis-grid
+    .analysis-card
+    .key-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.analysis-container
+    .analysis-content
+    .analysis-grid
+    .analysis-card
+    .key-points
+    li {
+    color: #546e7a;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.analysis-container
+    .analysis-content
+    .analysis-grid
+    .analysis-card
+    .key-points
+    li:before {
+    content: "•";
+    color: #1976d2;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.analysis-container
+    .analysis-content
+    .analysis-grid
+    .analysis-card
+    .key-points
+    li:last-child {
+    margin-bottom: 0;
+}
